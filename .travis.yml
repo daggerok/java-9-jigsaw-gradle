@@ -4,8 +4,7 @@ env:
 
 language: java
 jdk:
-  - openjdk8
-  - oraclejdk8
+  - oraclejdk9
 
 install: true
 script:
