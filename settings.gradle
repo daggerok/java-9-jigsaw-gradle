@@ -1,0 +1,2 @@
+["api", "impl", "config", "main"]
+    .each { include ":modules:daggerok.$it" }

@@ -1,0 +1,10 @@
+plugins {
+  id "org.gradle.java.experimental-jigsaw" version "0.1.1"
+}
+
+javaModule.name = "daggerok.config"
+
+dependencies {
+  api project(":modules:daggerok.api")
+  implementation project(":modules:daggerok.impl")
+}

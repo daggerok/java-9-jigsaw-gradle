@@ -1,0 +1,17 @@
+plugins {
+  id "org.gradle.java.experimental-jigsaw" version "0.1.1"
+  id "com.github.johnrengelman.shadow"
+  id "application"
+}
+
+javaModule.name = "daggerok.config"
+
+dependencies {
+//  api project(":modules:daggerok.api").sourceSets.main.output
+  api project(":modules:daggerok.api")
+  implementation project(":modules:daggerok.config")
+}
+
+mainClassName = "daggerok.Main"
+shadowJar.mustRunAfter jar
+jar.enabled = false

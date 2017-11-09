@@ -1,0 +1,39 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "com.github.jengelman.gradle.plugins:shadow:2.0.1"
+  }
+}
+
+allprojects {
+  apply plugin: "base"
+  apply plugin: "maven"
+
+  task wrapper(type: Wrapper) {
+    distributionType = "ALL"
+    gradleVersion = "4.3.1"
+  }
+}
+
+subprojects { sp ->
+  apply plugin: "java"
+  apply plugin: "java-library"
+
+  repositories {
+    mavenCentral()
+  }
+
+  version = "0.0.1"
+
+  sourceSets {
+    main.java.srcDirs += "src"
+  }
+
+  clean {
+    doFirst {
+      delete "$sp.projectDir/out"
+    }
+  }
+}
