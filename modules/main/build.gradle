@@ -4,12 +4,12 @@ plugins {
   id "application"
 }
 
-javaModule.name = "daggerok.config"
+javaModule.name = "main"
 
 dependencies {
-//  api project(":modules:daggerok.api").sourceSets.main.output
-  api project(":modules:daggerok.api")
-  implementation project(":modules:daggerok.config")
+//  api project(":modules:api").sourceSets.main.output
+  api project(":modules:api")
+  implementation project(":modules:config")
 }
 
 mainClassName = "daggerok.Main"

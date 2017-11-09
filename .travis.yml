@@ -9,4 +9,4 @@ jdk:
 install: true
 script:
   - bash gradlew clean build
-  - java -jar modules/daggerok.main/build/libs/*.jar
+  - java -jar modules/main/build/libs/*.jar

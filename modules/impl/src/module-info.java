@@ -1,5 +1,6 @@
-module daggerok.impl {
+module impl {
   opens daggerok.impl;
   exports daggerok.impl;
-  requires daggerok.api;
+
+  requires api;
 }

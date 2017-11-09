@@ -3,4 +3,4 @@ plugins {
   id "org.gradle.java.experimental-jigsaw" version "0.1.1"
 }
 
-javaModule.name = "daggerok.api"
+javaModule.name = "api"

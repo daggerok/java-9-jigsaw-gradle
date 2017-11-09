@@ -1,2 +1,2 @@
 ["api", "impl", "config", "main"]
-    .each { include ":modules:daggerok.$it" }
+    .each { include ":modules:$it" }

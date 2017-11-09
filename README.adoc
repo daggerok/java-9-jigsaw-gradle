@@ -22,5 +22,5 @@ This repository contains example how to compile build and run java 9 modules usi
 .build and run
 [source,bash]
 ----
-bash clean gradlew build; java -jar modules/daggerok.main/build/libs/*.jar
+bash gradlew clean build; java -jar modules/main/build/libs/*.jar
 ----
