@@ -9,7 +9,6 @@ buildscript {
 
 allprojects {
   apply plugin: "base"
-  apply plugin: "maven"
 
   task wrapper(type: Wrapper) {
     distributionType = "ALL"
