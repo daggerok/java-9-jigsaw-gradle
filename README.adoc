@@ -4,20 +4,26 @@ This repository contains example how to compile build and run java 9 modules usi
 
 .dependency tree
 ----
-+----------+      +--------------+
-|   main   |----->| config (IoC) |
-+----------+      +--------------+
-   |                     |
-   |    +----------------+
-   |    |                |
-   v    v                v
-+----------+      +--------------+
-|   api    | ---> |    impl      |
-+----------+      +--------------+
++------+    +--------+
+| main |--->| config |
++------+    +--------+
+  |           |    |
+  |   +-------+    |
+  |   |            |
+  v   v            v
++-------+   +--------+
+|  api  |<--|  impl  |
++-------+   +--------+
 ----
 
-. app depends on factory and api
-. factory depends on api and impl
+. main requires: config, api
+. config:
+  .. requires: api, impl
+  .. exports to: main
+. impl:
+  .. requires: api
+  .. exports to: config
+. api exports to: impl, config, main
 
 .build and run
 [source,bash]
