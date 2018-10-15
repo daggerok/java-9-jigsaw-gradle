@@ -23,7 +23,7 @@ subprojects { sp ->
   }
 }
 
-task wrapper {
+wrapper {
   distributionType = 'BIN'
   gradleVersion = '4.10.2'
 }
