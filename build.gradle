@@ -1,15 +1,10 @@
 allprojects {
-  apply plugin: "base"
-
-  task wrapper(type: Wrapper) {
-    distributionType = "ALL"
-    gradleVersion = "4.3.1"
-  }
+  apply plugin: 'base'
 }
 
 subprojects { sp ->
-  apply plugin: "java"
-  apply plugin: "java-library"
+  apply plugin: 'java'
+  apply plugin: 'java-library'
 
   repositories {
     mavenCentral()
@@ -18,7 +13,7 @@ subprojects { sp ->
   version = "0.0.1"
 
   sourceSets {
-    main.java.srcDirs += "src"
+    main.java.srcDirs += 'src'
   }
 
   clean {
@@ -26,4 +21,9 @@ subprojects { sp ->
       delete "$sp.projectDir/out"
     }
   }
+}
+
+task wrapper {
+  distributionType = 'BIN'
+  gradleVersion = '4.10.2'
 }
